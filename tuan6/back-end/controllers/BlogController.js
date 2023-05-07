@@ -44,3 +44,12 @@ exports.deleteBlog = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.getBlogByTitle = async (req, res) => {
+    try {
+        const blog = await blogService.getBlogByTitle(req.query.title);
+        res.json({ data: blog, status: "success" });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+}

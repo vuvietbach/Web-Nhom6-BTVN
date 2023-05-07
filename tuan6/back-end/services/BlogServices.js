@@ -18,3 +18,6 @@ exports.updateBlog = async (id, blog) => {
 exports.deleteBlog = async (id) => {
   return await BlogModel.findByIdAndDelete(id);
 };
+exports.getBlogByTitle = async (title) => {
+    return await BlogModel.find({ title: { $regex: `^${title}`, $options: "i" } })
+}
