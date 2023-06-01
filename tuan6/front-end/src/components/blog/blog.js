@@ -26,6 +26,7 @@ export default function Blog() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const search = event.target.search.value;
+        console.log(search);
         await axios.get(non_id_url + "find?title=" + search)
         .then(
             (response) => {

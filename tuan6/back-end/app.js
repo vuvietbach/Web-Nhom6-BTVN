@@ -18,8 +18,7 @@ app.listen(3001, () => {
 
 mongoose
     .connect(
-    process.env.MONGODB_URI ||
-        "mongodb+srv://it4409:it4409-soict@lamdb-crud.qd3s7vv.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://it4409:it4409-soict@lamdb-crud.qd3s7vv.mongodb.net/?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
